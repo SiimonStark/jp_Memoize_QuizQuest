@@ -1,0 +1,51 @@
+.header__nav {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  background-color: #3E6358;
+    .nav__title {
+      font-family: 'Acme', sans-serif;
+      font-size: 40px;
+      padding: 10px 15px;
+      background: #A1C181;
+      border-radius: 20px;
+      border: 3px ridge white;
+      text-shadow: 1.3px 1px .3px  black;
+    }
+    .nav__ul {
+      position: absolute;
+      right: 5%;
+      top: 15px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      background-color: #A1C181;
+      border-radius: 20px;
+      border: ridge white;
+      padding: 5px 10px 5px 10px;
+      .nav__btn {
+        color: white;
+        margin: 5px;
+        border-radius: 15px;
+        border: inset 2px white;
+        background: #619B8A;
+        height: 40px;
+        width: 40px;
+        align-content: center;
+        &:hover {
+          color: #FCCA46;
+          border:inset 1.5px #FCCA46;
+        }
+        i {
+          font-size: 23px;
+          text-shadow: 1.3px 1px .3px  black;
+        }
+      }
+      .home i,
+      .brain i{
+        font-size: 20px;
+      }
+    }
+}
