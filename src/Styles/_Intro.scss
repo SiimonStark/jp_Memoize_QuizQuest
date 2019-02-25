@@ -36,9 +36,11 @@
       background-color: #3E6358;
       padding: 10px;
       font-size: 20px;
+      outline: none;
       &:hover {
           color: #FCCA46;
           border:inset 1.5px #FCCA46;
+          outline: none;
       }
       i {
         padding: 5px;
