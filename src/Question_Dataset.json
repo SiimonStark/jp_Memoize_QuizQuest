@@ -1,4 +1,4 @@
-"Questions": [
+const protoQuestions = [
   {
 	"id": "0",
 	"category": "Fundamentals",
@@ -9,7 +9,7 @@
 		"the original array with its elements modified"
 	],
 	"correct_answer": "undefined",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+  "save": "false"
 }, {
 	"id": "1",
 	"category": "Fundamentals",
@@ -20,7 +20,7 @@
 		"Iteration methods"
 	],
 	"correct_answer": "Accessor methods",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Accessor_methods"
+  "save": "false"
 }, {
 	"id": "2",
 	"category": "Fundamentals",
@@ -31,7 +31,7 @@
 		".filter()"
 	],
 	"correct_answer": ".reduce()",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"
+  "save": "false"
 }, {
 	"id": "3",
 	"category": "Fundamentals",
@@ -42,7 +42,7 @@
 		".filter()"
 	],
 	"correct_answer": ".filter()",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+  "save": "false"
 }, {
 	"id": "4",
 	"category": "Fundamentals",
@@ -53,7 +53,7 @@
 		"The sorted array and copy of the original array."
 	],
 	"correct_answer": "The sorted array. No copy is made.",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
+  "save": "false"
 }, {
 	"id": "5",
 	"category": "Fundamentals",
@@ -64,7 +64,7 @@
 		"A list of all the property names stored in a different object."
 	],
 	"correct_answer": "An array of all the keys for that object.",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"
+  "save": "false"
 }, {
 	"id": "6",
 	"category": "Fundamentals",
@@ -75,7 +75,7 @@
 		"Object.new()"
 	],
 	"correct_answer": "Object.assign()",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"
+  "save": "false"
 }, {
 	"id": "7",
 	"category": "Fundamentals",
@@ -86,7 +86,7 @@
 		"Removing all the keys from that object."
 	],
 	"correct_answer": "Iterating over each key/value pair of an object.",
-	"resources": "https://medium.com/front-end-weekly/es6-map-vs-object-what-and-when-b80621932373"
+  "save": "false"
 }, {
 	"id": "8",
 	"category": "Fundamentals",
@@ -97,7 +97,7 @@
 		"unshift()"
 	],
 	"correct_answer": "concat()",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+  "save": "false"
 }, {
 	"id": "9",
 	"category": "Practice",
@@ -108,7 +108,7 @@
 		"words.join(' ')"
 	],
 	"correct_answer": "words.join(' ')",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
+  "save": "false"
 }, {
 	"id": "10",
 	"category": "Practice",
@@ -119,7 +119,7 @@
 		"colors.remove(0)"
 	],
 	"correct_answer": "colors.shift()",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+  "save": "false"
 }, {
 	"id": "11",
 	"category": "Practice",
@@ -130,224 +130,187 @@
 		"names.indexOf('George')"
 	],
 	"correct_answer": "names.includes('George')",
-	"resources": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes"
-},
-// !! ========================================================================================================================
-// !! ========================================================================================================================
-//                                          ____                       __     ____    ____
-// !! ============================         /               ||        //  \\  //     //       =================================
-// !! ============================        |        |   | ======      ||  ||  ===    ===     =================================
-// !! ============================         \____    \_/    ||        \\__//  ||     ||      =================================
-
-// !! ========================================================================================================================
-// !! ========================================================================================================================
-{
+  "save": "false"
+}, {
 	"id": "12",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		"undefined",
-		"an array of the same length with all elements modified",
-		"the original array with its elements modified"
-	],
-	"correct_answer": "undefined",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "What allows you to define a set of related information using key-value pairs?",
+	"answers": ["object", "array", "function"],
+	"correct_answer": "object",
+  "save": "false"
 }, {
 	"id": "13",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		"Accessor methods",
-		"Mutator methods",
-		"Iteration methods"
-	],
-	"correct_answer": "Accessor methods",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "What is a comma-separated list of related values?",
+	"answers": ["array", "object", "function"],
+	"correct_answer": "array",
+  "save": "false"
 }, {
 	"id": "14",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		".return()",
-		".reduce()",
-		".filter()"
-	],
-	"correct_answer": ".reduce()",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "What type of prototype method directly modifies the existing array?",
+	"answers": ["mutator method", "accessor method", "iteration method"],
+	"correct_answer": "mutator method",
+  "save": "false"
 }, {
 	"id": "15",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		".find()",
-		".includes()",
-		".filter()"
-	],
-	"correct_answer": ".filter()",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "What type of prototype method loops through the existing array and applies a callback function that may mutate each element and return a new value?",
+	"answers": ["mutator method", "accessor method", "iteration method"],
+	"correct_answer": "iteration method",
+  "save": "false"
 }, {
 	"id": "16",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		"colors.pop()",
-		"colors.shift()",
-		"colors.remove(0)"
-	],
-	"correct_answer": "colors.shift()",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "What is an example of a mutator method?",
+	"answers": ["sort()", "map()", "join()"],
+	"correct_answer": "sort()",
+  "save": "false"
 }, {
 	"id": "17",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		"A new array with the elements of the previous array sorted",
-		"The sorted array. No copy is made.",
-		"The sorted array and copy of the original array."
-	],
-	"correct_answer": "The sorted array. No copy is made.",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "Which array prototype is not an accessor method?",
+	"answers": ["join()", "slice()", "splice()"],
+	"correct_answer": "splice()",
+  "save": "false"
 }, {
 	"id": "18",
-	"category": "Prototype methods",
-	"question": "",
-	"answers": [
-		"words.join()",
-		"words.concat()",
-		"words.join(' ')"
-	],
-	"correct_answer": "words.join(' ')",
-	"resources": ""
+	"category": "Fundamentals",
+	"question": "What do iterator methods take in as their first argument?",
+	"answers": ["callback function", "current element", "an array"],
+	"correct_answer": "callback function",
+  "save": "false"
 }, {
 	"id": "19",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "What method would you use if you want a copy of an object so you can mutate it?",
 	"answers": [
-		"An array of all the keys for that object.",
-		"A console.log of all the keys for that object.",
-		"A list of all the property names stored in a different object."
+		"map()",
+		"reduce()",
+		"object.assign()"
 	],
-	"correct_answer": "An array of all the keys for that object.",
-	"resources": ""
+	"correct_answer": "object.assign()",
+  "save": "false"
 }, {
 	"id": "20",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "Which method would you use if you wanted just an array of the keys of an object?",
 	"answers": [
-		"Object.values()",
-		"Object.assign()",
-		"Object.new()"
+		"filter()",
+		"object.key()",
+		"Object.value()"
 	],
-	"correct_answer": "Object.assign()",
-	"resources": ""
+	"correct_answer": "object.key()",
+  "save": "false"
 }, {
 	"id": "21",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "What method could you use to get an array of an object's key value pairs?",
 	"answers": [
-		"Iterating over each key/value pair of an object.",
-		"Making a fresh copy of an object.",
-		"Removing all the keys from that object."
+		"object.keys()",
+		"object.assign()",
+		"object.entries()"
 	],
-	"correct_answer": "Iterating over each key/value pair of an object.",
-	"resources": ""
+	"correct_answer": "object.entries()",
+  "save": "false"
 }, {
 	"id": "22",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "I have an array of [chicken, cow, pig], after using which prototype, could I expect an output of [eggs, milkshake, bacon]",
 	"answers": [
 		"concat()",
 		"push()",
-		"unshift()"
+		"reduce()"
 	],
-	"correct_answer": "concat()",
-	"resources": ""
+	"correct_answer": "reduce()",
+  "save": "false"
 }, {
 	"id": "23",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "I want to check an array [taco, burrito, guac] to see if it contains guac. What proto would I use?",
 	"answers": [
-		"names.has('George')",
-		"names.includes('George')",
-		"names.indexOf('George')"
+		"has('guac')",
+		"includes('guac')",
+		"indexOf('guac')"
 	],
-	"correct_answer": "names.includes('George')",
-	"resources": ""
+	"correct_answer": "includes('guac')",
+  "save": "false"
 }, {
 	"id": "24",
-	"category": "Prototype methods",
-	"question": "",
+	"category": "Fundamentals",
+	"question": "True or False: accessor methods will change the original array.",
 	"answers": [
-		"A new array with the elements of the previous array sorted",
-		"The sorted array. No copy is made.",
-		"The sorted array and copy of the original array."
+		"True",
+		"False"
 	],
-	"correct_answer": "The sorted array. No copy is made.",
-	"resources": ""
+	"correct_answer": "False",
+  "save": "false"
 }, {
 	"id": "25",
-	"category": "Prototype methods",
-	"question": "",
+	"category": "Practice",
+	"question": "I have an array of buzzWords [seamless, intuitive, minimalist]. How would I turn them into a sentence to describe MY app?",
 	"answers": [
-		"words.join()",
-		"words.concat()",
-		"words.join(' ')"
+		"buzzWords.join()",
+		"buzzWords.concat()",
+		"buzzWords.join(' ')"
 	],
-	"correct_answer": "words.join(' ')",
-	"resources": ""
+	"correct_answer": "buzzWords.join(' ')",
+  "save": "false"
 }, {
 	"id": "26",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Fundamentals",
+	"question": "Which method takes in two parameters?",
 	"answers": [
-		"An array of all the keys for that object.",
-		"A console.log of all the keys for that object.",
-		"A list of all the property names stored in a different object."
+		"find()",
+		"reduce()",
+		"map()"
 	],
-	"correct_answer": "An array of all the keys for that object.",
-	"resources": ""
+	"correct_answer": "reduce()",
+  "save": "false"
 }, {
 	"id": "27",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "What does the callback in a `.forEach()` return?",
 	"answers": [
-		"Object.values()",
-		"Object.assign()",
-		"Object.new()"
+		"a truthy value",
+		"a falsey value",
+		"undefined"
 	],
-	"correct_answer": "Object.assign()",
-	"resources": ""
+	"correct_answer": "undefined",
+  "save": "false"
 }, {
 	"id": "28",
-	"category": "Prototype Methods",
-	"question": "",
-	"answers": [
-		"Iterating over each key/value pair of an object.",
-		"Making a fresh copy of an object.",
-		"Removing all the keys from that object."
-	],
-	"correct_answer": "Iterating over each key/value pair of an object.",
-	"resources": ""
-}, {
-	"id": "29",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "If I wanted to wanted to combine two arrays [happy, birthday] and [mason], which method would I use?",
 	"answers": [
 		"concat()",
-		"push()",
-		"unshift()"
+		"add()",
+		"combine()"
 	],
 	"correct_answer": "concat()",
-	"resources": ""
+  "save": "false"
+}, {
+	"id": "29",
+	"category": "Practice",
+	"question": "If I wanted to search through an array of games for my favorite trilogy of games, which is the best method to use?",
+	"answers": [
+		"filter()",
+		"find()",
+		"search()"
+	],
+	"correct_answer": "filter()",
+  "save": "false"
 }, {
 	"id": "30",
-	"category": "Prototype Methods",
-	"question": "",
+	"category": "Practice",
+	"question": "If I wanted to put all the numbers in an array in order, which method would I use?",
 	"answers": [
-		"names.has('George')",
-		"names.includes('George')",
-		"names.indexOf('George')"
+		"sort()",
+		"order()",
+		"a-z()"
 	],
-	"correct_answer": "names.includes('George')",
-	"resources": ""
+	"correct_answer": "sort()",
+  "save": "false"
 }
+]
+module.exports = { protoQuestions }
