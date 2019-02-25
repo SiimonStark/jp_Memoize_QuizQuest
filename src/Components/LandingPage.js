@@ -11,26 +11,15 @@ export default class LandingPage extends Component {
     super ();
     this.state= {
       questReview: [],
-      page: ["landing", "learn", "quiz", "review"]
+      pages: {
+        home: IntroBody,
+        learn: LearnPage,
+        quiz: UnderstandPage,
+        review: ReviewPage
+      },
+      Page: IntroBody,
+      test: [IntroBody, LearnPage, UnderstandPage, ReviewPage]
     }
-  }
-
-  handleLearn() {
-    return(
-      <LearnPage />
-    )
-  }
-
-  handleQuiz() {
-    return (
-      <UnderstandPage />
-    )
-  }
-
-  handleReview() {
-    return (
-      <ReviewPage />
-    )
   }
 
   handleNavClick = (event) => {
@@ -38,28 +27,35 @@ export default class LandingPage extends Component {
     console.log("You are clicking:", btnClicked)
   }
 
-  buttonClass = (btn, btnClicked, index, toRender) => {
-    btn.includes(this.state.page)
+  buttonClass = (btn, btnClicked) => {
     if (btn.includes("home")) {
-      btnClicked = "home"
-      toRender = <IntroBody navClick={this.handleNavClick}/>
+      btnClicked = this.state.pages.home
     } else if (btn.includes("learn")){
-      btnClicked = "learn"
+      btnClicked = this.state.pages.learn
     } else if (btn.includes("quiz")) {
-      btnClicked = "quiz"
+      btnClicked = this.state.pages.quiz
     } else if (btn.includes("review")) {
-      btnClicked = "review"
+      btnClicked = this.state.pages.review
     } else {
       console.log("Alert: Nothing is happening!")
     }
+    this.setPages(btnClicked);
     return (btnClicked);
   }
 
+  setPages(btnClicked) {
+    console.log("log Btn:", btnClicked)
+    console.log("State Pages: ", this.state.pages);
+    this.setState({test: [btnClicked]})
+    this.setState({Page: btnClicked});
+  }
+
   render () {
+    console.log("state Holds: ", this.state.test)
     return(
       <div className="layout">
         <Navigation navClick={this.handleNavClick}/>
-        <IntroBody navClick={this.handleNavClick}/>  
+        <this.state.Page navClick={this.handleNavClick}/>  
       </div>
     )
   }
