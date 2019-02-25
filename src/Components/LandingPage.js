@@ -11,7 +11,13 @@ export default class LandingPage extends Component {
     super ();
     this.state= {
       questReview: [],
-      page: ["landing", "learn", "quiz", "review"]
+      pages: {
+        home: "IntroBody",
+        learn: "LearnPage",
+        quiz: "UnderstandingPage",
+        review: "ReviewPage"
+      },
+      // toRender: this.state.page.landing || "test"
     }
   }
 
@@ -39,10 +45,9 @@ export default class LandingPage extends Component {
   }
 
   buttonClass = (btn, btnClicked, index, toRender) => {
-    btn.includes(this.state.page)
+    // btn.includes(this.state.page)
     if (btn.includes("home")) {
       btnClicked = "home"
-      toRender = <IntroBody navClick={this.handleNavClick}/>
     } else if (btn.includes("learn")){
       btnClicked = "learn"
     } else if (btn.includes("quiz")) {
@@ -52,10 +57,17 @@ export default class LandingPage extends Component {
     } else {
       console.log("Alert: Nothing is happening!")
     }
+    this.setPages(btnClicked);
     return (btnClicked);
   }
 
+  setPages(btnClicked) {
+    // let Page = this.state.pages[btnClicked];
+    console.log("setPages:", this.state.pages[btnClicked]);
+  }
+
   render () {
+    // let Page = <IntroBody />
     return(
       <div className="layout">
         <Navigation navClick={this.handleNavClick}/>
