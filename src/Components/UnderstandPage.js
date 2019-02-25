@@ -1,24 +1,51 @@
 import React, {Component} from 'react';
+import QuestPopup from './Understanding_Page/QuestPopup';
+import CorrectPopup from './Understanding_Page/CorrectPopup';
+import IncorrectPopup from './Understanding_Page/IncorrectPopup';
 
 export default class UnderstandPage extends Component {
   constructor(props) {
     super(props);
-    this.state={}
+    this.state={
+      allQuests: this.props.questions,
+      currQuest: this.props.questions[0],
+      Popups: {
+        question: QuestPopup,
+        correct: CorrectPopup,
+        incorrect: IncorrectPopup
+      },
+      Popup: QuestPopup
+    }
+  }
+
+  renderCorrect = () => {
+    console.log("testing: renderCorrect()")
+    this.setState({Popup: CorrectPopup})
+  }
+
+  renderIncorrect = () => {
+    console.log("testing: renderIncorrect()")
+    this.setState({ Popup: IncorrectPopup })
+  }
+
+  NextPop = (event) => {
+    console.log("You're doing something right!")
+    this.setState({ Popup: QuestPopup })
+  }
+
+  renderIndQuest = () => {
+    this.state.questions.forEach((quest, index) => {
+      console.log(this.state.questions[index])
+    })
   }
 
   render() {
+    console.log("Question: ", this.state.allQuests[0])
     return(
-      <section className="landing__body">
-        <article className="Mission">
-          <h2 className="Quiz__question">What does reduce Return?</h2>
-        </article>
-        <nav className="landing__nav">
-          <button className="Quiz__choice--1 choice" >Thing1</button>
-          <button className="Quiz__choice--2 choice" >Thing2</button>
-          <button className="Quiz__choice--3 choice" >Thing3</button>
-          <button className="Quiz__choice--4 choice" >Thing4</button>
-        </nav>
-      </section>
+      <this.state.Popup nextPop= {this.NextPop}
+        currQuest= {this.state.currQuest}
+        renderCorrect= {this.renderCorrect}
+        renderIncorrect= {this.renderIncorrect} />
     );
   }
 }

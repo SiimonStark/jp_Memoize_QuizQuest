@@ -34,8 +34,10 @@
         height: 40px;
         width: 40px;
         align-content: center;
+        outline: none;
         &:hover {
           color: #FCCA46;
+          outline: none;
           border:inset 1.5px #FCCA46;
         }
         i {
