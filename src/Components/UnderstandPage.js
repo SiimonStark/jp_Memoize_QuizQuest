@@ -42,6 +42,9 @@ export default class UnderstandPage extends Component {
     console.log("In renderNextQuest()")
     let newIndex = this.state.index;
     newIndex++;
+    if (this.state.index === 30) {
+      newIndex = 0;
+    }
     console.log(newIndex)
     this.setState( {index: newIndex, nextQuest: this.props.questions[newIndex]} );
   }

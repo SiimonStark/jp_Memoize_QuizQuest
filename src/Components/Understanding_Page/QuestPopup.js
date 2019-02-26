@@ -33,10 +33,6 @@ export default class QuestPopup extends Component {
           <h2 className="Quiz__question">{this.props.currQuest.question}</h2>
         </article>
         <nav className="landing__nav">
-          <button className="Quiz__choice--1 choice" onClick={this.validateAns}>{this.props.currQuest.answers[0]}</button>
-          <button className="Quiz__choice--2 choice" onClick={this.validateAns}>{this.props.currQuest.answers[1]}</button>
-          <button className="Quiz__choice--3 choice" onClick={this.validateAns}>Thing3</button>
-          <button className="Quiz__choice--4 choice" onClick={this.validateAns}>Thing4</button>
           {this.mapButtons()}
         </nav>
       </section>
