@@ -10,7 +10,7 @@ export default class ReviewPage extends Component {
     return(
       <section className="landing__body">
         <article className="Mission">
-          <h2 className="Quiz__question">Need to review any questions?</h2>
+          <h2 className="Quiz__title">Need to review any questions?</h2>
         </article>
         <nav className="landing__nav">
           <button className="Review__option--1 choice" >Review1</button>

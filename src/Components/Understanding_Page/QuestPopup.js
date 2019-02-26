@@ -36,7 +36,7 @@ export default class QuestPopup extends Component {
     console.log("I want to display: ", this.props.currQuest.question)
     return (
       <section className="landing__body">
-        <article className="Mission">
+        <article className="Quiz__title">
           <h2 className="Quiz__question">{this.props.currQuest.question}</h2>
         </article>
         <nav className="landing__nav">

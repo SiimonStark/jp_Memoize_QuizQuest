@@ -20,7 +20,7 @@ export default class CorrectPopup extends Component {
   render() {
     return (
       <section className="landing__body">
-        <article className="Mission">
+        <article className="Quiz__title">
           <h2 className="Correct__quest">Correct Answer!</h2>
           <h4 className="Correct__ans">{"thing2"}</h4>
         </article>
