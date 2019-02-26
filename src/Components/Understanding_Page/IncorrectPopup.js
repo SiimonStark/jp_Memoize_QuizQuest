@@ -25,7 +25,7 @@ export default class IncorrectPopup extends Component {
           <h4 className="Correct__ans">The Correct Answer: {"thing2"}</h4>
         </article>
         <nav className="landing__nav">
-          <button className="nextQuest__btn next" onClick={this.props.nextPop}>Next</button>
+          <button className="nextQuest__btn next choice" onClick={this.props.nextPop}>Next</button>
         </nav>
       </section>
     );

@@ -7,8 +7,10 @@ export default class UnderstandPage extends Component {
   constructor(props) {
     super(props);
     this.state={
+      index: 0,
       allQuests: this.props.questions,
       currQuest: this.props.questions[0],
+      nextQuest: this.props.questions[1],
       Popups: {
         question: QuestPopup,
         correct: CorrectPopup,
@@ -20,27 +22,33 @@ export default class UnderstandPage extends Component {
 
   renderCorrect = () => {
     console.log("testing: renderCorrect()")
+    this.setNextQuest();
     this.setState({Popup: CorrectPopup})
   }
 
   renderIncorrect = () => {
     console.log("testing: renderIncorrect()")
+    this.setNextQuest();
     this.setState({ Popup: IncorrectPopup })
   }
 
   NextPop = (event) => {
     console.log("You're doing something right!")
-    this.setState({ Popup: QuestPopup })
+    console.log("Index= ", this.state.index)
+    this.setState({ Popup: QuestPopup, currQuest: this.state.nextQuest })
   }
 
-  renderIndQuest = () => {
-    this.state.questions.forEach((quest, index) => {
-      console.log(this.state.questions[index])
-    })
+  setNextQuest = () => {
+    console.log("In renderNextQuest()")
+    let newIndex = this.state.index;
+    newIndex++;
+    console.log(newIndex)
+    this.setState( {index: newIndex, nextQuest: this.props.questions[newIndex]} );
   }
 
   render() {
-    console.log("Question: ", this.state.allQuests[0])
+    console.log("Current Question: ", this.state.currQuest.question)
+    console.log("Next Question: ", this.state.nextQuest.question)
     return(
       <this.state.Popup nextPop= {this.NextPop}
         currQuest= {this.state.currQuest}
