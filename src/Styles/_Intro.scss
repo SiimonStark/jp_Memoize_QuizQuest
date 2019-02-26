@@ -2,6 +2,7 @@
   font-family: 'Acme', sans-serif;
   text-shadow: 2px 3px 0.3px black;
   font-size: 30px;
+  padding-right: 110px;
 }
 
 .mission__content {
@@ -39,6 +40,7 @@
       padding: 10px;
       font-size: 20px;
       outline: none;
+      text-shadow: 2px 2px 0.3px black;
       &:hover {
           color: #FCCA46;
           border:inset 1.5px #FCCA46;

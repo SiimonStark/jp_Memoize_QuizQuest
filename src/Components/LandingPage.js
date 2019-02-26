@@ -25,13 +25,11 @@ export default class LandingPage extends Component {
         incorrect: IncorrectPopup
       },
       Page: IntroBody,
-      test: [IntroBody, LearnPage, UnderstandPage, ReviewPage]
     }
   }
 
   handleNavClick = (event) => {
     let btnClicked = this.buttonClass(event.target.className);
-    // * console.log("You are clicking:", btnClicked)
   }
 
   buttonClass = (btn, btnClicked) => {
@@ -51,14 +49,10 @@ export default class LandingPage extends Component {
   }
 
   setPages(btnClicked) {
-    // * console.log("log Btn:", btnClicked)
-    // * console.log("State Pages: ", this.state.pages);
-    this.setState({test: [btnClicked]})
     this.setState({Page: btnClicked});
   }
 
   render () {
-    // * console.log("state Holds: ", this.state.test)
     return(
       <div className="layout">
         <Navigation navClick={this.handleNavClick}/>

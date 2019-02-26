@@ -3,14 +3,7 @@ import React, { Component } from 'react';
 export default class CorrectPopup extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      correctQuest: this.props.currQuest
-    }
-  }
-
-  onNext = () => {
-    let newIndex = 0;
-
+    this.state = {}
   }
 
   render() {

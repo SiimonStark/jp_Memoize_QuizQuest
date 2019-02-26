@@ -8,13 +8,9 @@ export default class QuestPopup extends Component {
 
   validateAns = (event) => {
     let ansClicked = event.target.textContent;
-    console.log(ansClicked);
-
     if (ansClicked === this.props.currQuest.correct_answer) {
-      console.log("Great Job");
       this.props.renderCorrect();
     } else {
-      console.log("Try Again");
       this.props.renderIncorrect();
     }
   }
@@ -26,7 +22,6 @@ export default class QuestPopup extends Component {
   }
 
   render() {
-    console.log("I want to display: ", this.props.currQuest.question)
     return (
       <section className="landing__body">
         <article className="Quiz__title">
